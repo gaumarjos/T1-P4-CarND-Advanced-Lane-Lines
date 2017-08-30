@@ -26,8 +26,6 @@ The goals / steps of this project are the following:
 [linesprojected1]: ./writeup_images/linesprojected1.png ""
 [lines2]: ./writeup_images/lines2.png ""
 [linesprojected2]: ./writeup_images/linesprojected2.png ""
-[video]: ./test_videos/project_video_output.mp4 ""
-[challengevideo]: ./test_videos/challenge_video_output.mp4 ""
 
 ## List of files
 * Writeup: "README.md"
@@ -128,14 +126,14 @@ Here are two examples:
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-The code for this step is contained in section 3 of the IPython notebook. In particular, refer to functions `lines_fit_new_frame` and `lines_fit_based_on_previous_frame`.
+The code for this step is contained in section 3 of the IPython notebook. In particular, refer to functions `lines_fit_new_frame` and `lines_fit_based_on_previous_frame`. The sliding window (with 10 vertical windows) based on the horizontal hystogram technique has been used, as presented in the course.
 
 ![alt text][lines1]
 ![alt text][lines2]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-The code for this step is contained in section 3 of the IPython notebook. In particular, refer to function `curvature_radius_and_distance_from_centre`. The sliding window (with 10 vertical windows) based on the horizontal hystogram technique has been used, as presented in the course.
+The code for this step is contained in section 3 of the IPython notebook. In particular, refer to function `curvature_radius_and_distance_from_centre`.
 
 Fuctions `detect_linetype` and `lane_width_validation` are also used. The first estimates whether the line is continuous or dashed and it's used to better average left and right line curvatures (a continuous line, having more points, is interpolated better by the polynomial and the curvature can be trusted more than those computed on a dashed line) while the second checks that the line width is meaningful (this reduces the possibility of the road side to be detected as line, as the lane would be too wide).
 
@@ -157,11 +155,16 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 The project video is [here](./test_videos/project_video_output.mp4).
 
-![alt text][video]
-
 The same system is working also on the "challenge" video [here](./test_videos/challenge_video_output.mp4).
 
-![alt text][challengevideo]
+The videos contain information about:
+* Upper left corner:
+  * Curve radius
+  * Lane width
+  * Distance of the car from the centre of the lane
+* Upper right corner:
+  * What the line detection algorithm "sees", with the line polynomial interpolation
+  * A letter, N means the line was fitted considering only the current frame as a new frame, P means it makes use of the fit in the previous frame as well (code-wise, it's when the `lines_fit_new_frame` and `lines_fit_based_on_previous_frame` functions respectively are used).
 
 The code for this step is contained in section 3 and 4 of the IPython notebook. In particular, refer to class class `Line` in section 3 and to function `pipeline` in section 4. The first contains the logic that makes use of line detection in previous frames to better estimate the lines while the latter is the final processing pipeline that contains all the steps necessary to process a video frame.
 
