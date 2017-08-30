@@ -166,6 +166,8 @@ The same system is working also on the "challenge" video [here](./test_videos/ch
 
 The code for this step is contained in section 3 and 4 of the IPython notebook. In particular, refer to class class `Line` in section 3 and to function `pipeline` in section 4. The first contains the logic that makes use of line detection in previous frames to better estimate the lines while the latter is the final processing pipeline that contains all the steps necessary to process a video frame.
 
+For the code to run the whole pipeline and generate these videos, refer to section 6 of the IPython notebook.
+
 ### Discussion
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
