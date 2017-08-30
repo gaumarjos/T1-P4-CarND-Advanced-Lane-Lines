@@ -1,8 +1,4 @@
-## Writeup Template
-
----
-
-**Advanced Lane Finding Project**
+## **Advanced Lane Finding Project**
 
 The goals / steps of this project are the following:
 
@@ -34,9 +30,12 @@ The goals / steps of this project are the following:
 [challengevideo]: ./test_videos/challenge_video_output.mp4 ""
 
 ## List of files
+* Writeup: "README.md"
 * Notebook: [lanes.ipynb](lanes.ipynb)
 * Video files: see folder "test_videos"
-* Images: test images are in folder "test_images", these are the ones provided with the project and those I added to calibrate my algorithm.
+* Output images: contained in folder "writeup_images", are the ones presented in this writeup.
+* Test images: contained in folder "test_images", these are the ones provided with the project and those I added to calibrate my algorithm.
+
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -48,7 +47,7 @@ Here I will consider the rubric points individually and describe how I addressed
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.
 
-You're reading it!
+This file.
 
 ### Camera Calibration
 
