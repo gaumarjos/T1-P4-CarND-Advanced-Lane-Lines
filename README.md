@@ -30,12 +30,13 @@ The goals / steps of this project are the following:
 [linesprojected1]: ./writeup_images/linesprojected1.png ""
 [lines2]: ./writeup_images/lines2.png ""
 [linesprojected2]: ./writeup_images/linesprojected2.png ""
-
-[video1]: ./project_video.mp4 "Video"
+[video]: ./test_videos/project_video_output.mp4 ""
+[challengevideo]: ./test_videos/challenge_video_output.mp4 ""
 
 ## List of files
 * Notebook: [lanes.ipynb](lanes.ipynb)
-* 
+* Video files: see folder "test_videos"
+* Images: test images are in folder "test_images", these are the ones provided with the project and those I added to calibrate my algorithm.
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -156,7 +157,12 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 The project video is [here](./test_videos/project_video_output.mp4).
+
+![alt text][video]
+
 The same system is working also on the "challenge" video [here](./test_videos/challenge_video_output.mp4).
+
+![alt text][challengevideo]
 
 The code for this step is contained in section 3 and 4 of the IPython notebook. In particular, refer to class class `Line` in section 3 and to function `pipeline` in section 4. The first contains the logic that makes use of line detection in previous frames to better estimate the lines while the latter is the final processing pipeline that contains all the steps necessary to process a video frame.
 
